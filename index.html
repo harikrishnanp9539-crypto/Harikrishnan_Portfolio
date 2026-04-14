@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Harikrishnan P | The Engineering Editorial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#d1e4ff",
+                    "secondary": "#b0c9e2",
+                    "outline-variant": "#40484f",
+                    "surface-bright": "#393939",
+                    "on-primary-fixed": "#001d36",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#131313",
+                    "surface-container": "#201f1f",
+                    "inverse-surface": "#e5e2e1",
+                    "on-tertiary": "#4a2800",
+                    "secondary-fixed": "#cce5ff",
+                    "tertiary-fixed": "#ffdcbf",
+                    "surface-variant": "#353534",
+                    "on-error": "#690005",
+                    "on-tertiary-container": "#ffd5b0",
+                    "primary-container": "#0063a8",
+                    "surface-tint": "#9fcaff",
+                    "on-primary-container": "#c6deff",
+                    "surface": "#131313",
+                    "on-primary-fixed-variant": "#00497d",
+                    "on-surface-variant": "#c0c7d0",
+                    "surface-container-high": "#2a2a2a",
+                    "tertiary-container": "#8f5201",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-fixed": "#2d1600",
+                    "background": "#131313",
+                    "tertiary": "#ffb873",
+                    "on-secondary": "#193346",
+                    "surface-container-low": "#1c1b1b",
+                    "on-secondary-fixed": "#011e30",
+                    "on-tertiary-fixed-variant": "#6a3b00",
+                    "inverse-primary": "#0061a4",
+                    "on-secondary-container": "#9fb8d0",
+                    "on-secondary-fixed-variant": "#31495e",
+                    "tertiary-fixed-dim": "#ffb873",
+                    "primary": "#9fcaff",
+                    "on-background": "#e5e2e1",
+                    "on-primary": "#003258",
+                    "on-surface": "#e5e2e1",
+                    "outline": "#8a919a",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#313030",
+                    "primary-fixed-dim": "#9fcaff",
+                    "secondary-container": "#31495e",
+                    "secondary-fixed-dim": "#b0c9e2",
+                    "surface-container-highest": "#353534",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.7);
+            backdrop-filter: blur(24px);
+        }
+        .text-gradient-primary {
+            background: linear-gradient(135deg, #9fcaff 0%, #0063a8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-mesh {
+            background-image: radial-gradient(at 0% 0%, rgba(0, 99, 168, 0.15) 0%, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(255, 184, 115, 0.05) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/70 backdrop-blur-xl shadow-2xl shadow-black/20">
+<div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold tracking-tighter text-zinc-100 uppercase">
+                Software Engineer
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-manrope tracking-tight text-sm uppercase text-zinc-400 hover:text-zinc-100 transition-colors" href="#about">About</a>
+<a class="font-manrope tracking-tight text-sm uppercase text-zinc-400 hover:text-zinc-100 transition-colors" href="#experience">Experience</a>
+<a class="font-manrope tracking-tight text-sm uppercase text-zinc-400 hover:text-zinc-100 transition-colors" href="#projects">Projects</a>
+<a class="font-manrope tracking-tight text-sm uppercase text-zinc-400 hover:text-zinc-100 transition-colors" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-zinc-400 hover:text-zinc-100 transition-colors">dark_mode</button>
+<a class="bg-primary text-on-primary px-5 py-2 rounded-md font-manrope tracking-tight text-sm uppercase font-bold hover:translate-y-[-2px] transition-all duration-300" href="Software_Engineer.pdf" download>
+                    Download CV
+                </a>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-20 hero-mesh overflow-hidden">
+<div class="max-w-screen-2xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-highest border border-outline-variant/15">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-primary">Available for Opportunities</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-none">
+                        Harikrishnan P
+                    </h1>
+<p class="text-2xl md:text-3xl text-zinc-400 font-light max-w-2xl leading-relaxed">
+                        Software Engineer | Full Stack Developer
+                        <span class="block mt-4 text-zinc-500 text-xl italic font-serif">Building scalable web applications with AI-powered solutions</span>
+</p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="px-8 py-4 bg-primary text-on-primary rounded-md font-bold text-sm uppercase tracking-widest hover:translate-y-[-2px] transition-transform" href="#projects">
+                            View Projects
+                        </a>
+<a class="px-8 py-4 bg-surface-variant/20 text-primary border border-primary/10 rounded-md font-bold text-sm uppercase tracking-widest hover:bg-surface-variant/40 transition-all" href="#contact">
+                            Contact Me
+                        </a>
+</div>
+</div>
+<div class="hidden lg:block lg:col-span-4 relative">
+<div class="aspect-square rounded-2xl bg-surface-container-low overflow-hidden relative group">
+<img alt="Harikrishnan P" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Modern minimalist aesthetic portrait of a young professional in a high-tech studio environment with soft blue architectural lighting" src="me.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="py-24 bg-surface-container-low" id="about">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-4">
+<h2 class="text-4xl font-bold tracking-tighter sticky top-32 uppercase text-primary">01 / About Me</h2>
+</div>
+<div class="lg:col-span-8 space-y-8">
+<p class="text-3xl font-medium leading-tight text-on-surface">
+                            A BSc Computer Science graduate with a relentless focus on architecting efficient digital ecosystems. 
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-zinc-400 leading-relaxed text-lg">
+<p>
+                                Specializing in the Python and Django stack, I build robust RESTful APIs that serve as the backbone for modern web applications. My approach combines technical precision with a product-centric mindset.
+                            </p>
+<p>
+                                Beyond standard web development, my passion lies at the intersection of AI and Machine Learning. I enjoy exploring how neural networks and clustering algorithms can solve real-world problems in intuitive ways.
+                            </p>
+</div>
+<div class="pt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-6 bg-surface rounded-xl border border-outline-variant/10">
+<span class="text-primary block text-3xl font-bold mb-1">2026</span>
+<span class="text-xs uppercase tracking-widest text-zinc-500">Graduation</span>
+</div>
+<div class="p-6 bg-surface rounded-xl border border-outline-variant/10">
+<span class="text-primary block text-3xl font-bold mb-1">5+</span>
+<span class="text-xs uppercase tracking-widest text-zinc-500">ML Models</span>
+</div>
+<div class="p-6 bg-surface rounded-xl border border-outline-variant/10">
+<span class="text-primary block text-3xl font-bold mb-1">Full</span>
+<span class="text-xs uppercase tracking-widest text-zinc-500">Stack Proficient</span>
+</div>
+<div class="p-6 bg-surface rounded-xl border border-outline-variant/10">
+<span class="text-primary block text-3xl font-bold mb-1">AI</span>
+<span class="text-xs uppercase tracking-widest text-zinc-500">Specialist</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section - Bento Grid -->
+<section class="py-24 px-6 md:px-12">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-16">
+<h2 class="text-4xl font-bold tracking-tighter uppercase mb-4">02 / Technical Arsenal</h2>
+<p class="text-zinc-500 max-w-xl">Curated stack for modern high-performance engineering.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<!-- Tech Skill Cards -->
+<div class="p-8 bg-surface-container rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-surface-container-highest transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">code</span>
+<span class="font-bold tracking-tight uppercase text-xs">Python</span>
+</div>
+<div class="p-8 bg-surface-container rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-surface-container-highest transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">terminal</span>
+<span class="font-bold tracking-tight uppercase text-xs">Django</span>
+</div>
+<div class="p-8 bg-surface-container rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-surface-container-highest transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">javascript</span>
+<span class="font-bold tracking-tight uppercase text-xs">JavaScript</span>
+</div>
+<div class="p-8 bg-surface-container rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-surface-container-highest transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">phone_iphone</span>
+<span class="font-bold tracking-tight uppercase text-xs">Flutter</span>
+</div>
+<div class="p-8 bg-surface-container rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-surface-container-highest transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">psychology</span>
+<span class="font-bold tracking-tight uppercase text-xs">AI / ML</span>
+</div>
+<div class="p-8 bg-surface-container rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-surface-container-highest transition-colors group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">database</span>
+<span class="font-bold tracking-tight uppercase text-xs">MySQL</span>
+</div>
+<div class="md:col-span-2 lg:col-span-3 p-8 bg-surface-container rounded-2xl flex flex-col justify-between hover:bg-surface-container-highest transition-colors">
+<span class="text-tertiary font-bold uppercase text-xs tracking-widest mb-4">Deep Learning Expertise</span>
+<h3 class="text-2xl font-bold">CNN Architecture &amp; Feature Extraction</h3>
+<p class="text-zinc-500 text-sm mt-2">Implementation of convolutional layers for high-accuracy image classification and recommendation engines.</p>
+</div>
+<div class="md:col-span-2 lg:col-span-3 p-8 bg-surface-container rounded-2xl flex flex-col justify-between hover:bg-surface-container-highest transition-colors">
+<span class="text-tertiary font-bold uppercase text-xs tracking-widest mb-4">Data Clustering</span>
+<h3 class="text-2xl font-bold">K-Means for Segmentation</h3>
+<p class="text-zinc-500 text-sm mt-2">Utilizing unsupervised learning to cluster complex datasets, specifically for skin tone and color detection in fashion apps.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-24 bg-surface-container-low" id="experience">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-4">
+<h2 class="text-4xl font-bold tracking-tighter uppercase text-primary">03 / Experience</h2>
+</div>
+<div class="lg:col-span-8 space-y-12">
+<div class="relative pl-8 border-l border-outline-variant/20">
+<div class="absolute -left-[5px] top-0 w-[9px] h-[9px] rounded-full bg-primary shadow-[0_0_10px_#9fcaff]"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+<h3 class="text-2xl font-bold">Web Development Intern</h3>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] uppercase font-bold tracking-widest text-zinc-400">June 2024 — Present</span>
+</div>
+<h4 class="text-lg font-semibold text-secondary mb-4">Unified Mentor</h4>
+<ul class="space-y-4 text-zinc-400">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>Developing 2 responsive web applications with REST API backends, following industry best practices for scalability and
+performance.
+</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>Implemented full-stack development tasks including UI implementation using Bootstrap and MySQL database interactions.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span>Practiced Git-based version control and Agile sprint workflows in a remote team environment, improving delivery consistency.
+</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-24 px-6 md:px-12" id="projects">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<h2 class="text-4xl font-bold tracking-tighter uppercase mb-4">04 / Featured Projects</h2>
+<p class="text-zinc-500 max-w-xl">Intelligent systems designed to bridge the gap between AI and user experience.</p>
+</div>
+<a class="text-primary font-bold uppercase text-xs tracking-widest flex items-center gap-2 hover:gap-4 transition-all group" href="https://github.com/harikrishnanp9539-crypto/TrendFit" target="_blank">
+                        See All Repositories through GitHub <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+<!-- High-End Project Card -->
+<div class="bg-surface-container rounded-3xl overflow-hidden group border border-outline-variant/10">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="p-12 space-y-8 flex flex-col justify-center">
+<div class="space-y-2">
+<span class="text-primary font-bold uppercase text-xs tracking-widest">AI Fashion Recommendation</span>
+<h3 class="text-4xl font-bold tracking-tight">TrendFit</h3>
+</div>
+<p class="text-zinc-400 text-lg leading-relaxed">
+                                A cutting-edge mobile application that revolutionizes fashion selection by leveraging deep learning. TrendFit analyzes user characteristics to recommend the most flattering styles and colors.
+                            </p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-1.5 bg-surface-container-highest rounded-full text-xs font-medium border border-outline-variant/10">Django</span>
+<span class="px-4 py-1.5 bg-surface-container-highest rounded-full text-xs font-medium border border-outline-variant/10">MySQL</span>
+<span class="px-4 py-1.5 bg-surface-container-highest rounded-full text-xs font-medium border border-outline-variant/10">Flutter</span>
+<span class="px-4 py-1.5 bg-surface-container-highest rounded-full text-xs font-medium border border-outline-variant/10">CNN</span>
+<span class="px-4 py-1.5 bg-surface-container-highest rounded-full text-xs font-medium border border-outline-variant/10">K-Means</span>
+</div>
+<div class="pt-4 border-t border-outline-variant/10 grid grid-cols-2 gap-8">
+<div>
+<span class="block text-sm font-bold text-zinc-200 uppercase mb-2">Algorithm</span>
+<p class="text-xs text-zinc-500">CNN classification for garment categorization and skin tone detection via K-Means clustering.</p>
+</div>
+<div>
+<span class="block text-sm font-bold text-zinc-200 uppercase mb-2">Impact</span>
+<p class="text-xs text-zinc-500">Automated styling advice personalized to individual unique biological features.</p>
+</div>
+</div>
+</div>
+<div class="relative overflow-hidden h-[400px] lg:h-auto">
+<img alt="TrendFit UI" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60" data-alt="Conceptual interface design for a luxury fashion mobile app showing AI scanning a model with subtle glowing mesh overlays" src="project.png"/>
+<div class="absolute inset-0 bg-gradient-to-l from-surface-container via-transparent to-transparent hidden lg:block"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Certs - Asymmetric Split -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+<!-- Education -->
+<div>
+<h2 class="text-4xl font-bold tracking-tighter uppercase mb-12">05 / Foundations</h2>
+<div class="space-y-12">
+<div class="group">
+<span class="text-xs uppercase tracking-[0.2em] text-zinc-500 font-bold mb-4 block">Degree</span>
+<h3 class="text-2xl font-bold group-hover:text-primary transition-colors">Bachelor of Computer Science</h3>
+<p class="text-lg text-zinc-400 mt-2">University of Calicut</p>
+<div class="flex items-center gap-4 mt-4">
+<span class="text-sm font-medium px-3 py-1 bg-surface rounded text-primary">2023 — 2026</span>
+<span class="text-xs text-zinc-500">Undergraduate Candidate</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Certifications -->
+<div>
+<h2 class="text-4xl font-bold tracking-tighter uppercase mb-12">06 / Credentials</h2>
+<div class="grid gap-6">
+<div class="p-6 bg-surface-container-high rounded-2xl border border-outline-variant/10 flex items-center justify-between hover:translate-x-2 transition-all">
+<div>
+<h4 class="font-bold text-zinc-200">Python &amp; Django Specialist</h4>
+<p class="text-xs text-zinc-500 uppercase tracking-widest mt-1">Technical Training</p>
+</div>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<div class="p-6 bg-surface-container-high rounded-2xl border border-outline-variant/10 flex items-center justify-between hover:translate-x-2 transition-all">
+<div>
+<h4 class="font-bold text-zinc-200">CMS Architecture (WordPress)</h4>
+<p class="text-xs text-zinc-500 uppercase tracking-widest mt-1">Web Standards</p>
+</div>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+<div class="p-6 bg-surface-container-high rounded-2xl border border-outline-variant/10 flex items-center justify-between hover:translate-x-2 transition-all">
+<div>
+<h4 class="font-bold text-zinc-200">Digital Marketing Strategy</h4>
+<p class="text-xs text-zinc-500 uppercase tracking-widest mt-1">Growth Engineering</p>
+</div>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-6 md:px-12 relative overflow-hidden" id="contact">
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-5 space-y-8">
+<h2 class="text-5xl md:text-7xl font-bold tracking-tighter uppercase">Let's Build the Future</h2>
+<p class="text-xl text-zinc-400">Ready to discuss your next technical challenge? My inbox is always open for architectural discussions and project inquiries.</p>
+<div class="space-y-6 pt-8">
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-zinc-200 group-hover:text-on-primary">mail</span>
+</div>
+<div>
+<span class="block text-xs uppercase font-bold text-zinc-500 tracking-widest">Email Address</span>
+<a class="text-lg font-semibold hover:text-primary" href="mailto:harikrishnanp9539@gmail.com">harikrishnanp9539@gmail.com</a>
+</div>
+</div>
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-zinc-200 group-hover:text-on-primary">call</span>
+</div>
+<div>
+<span class="block text-xs uppercase font-bold text-zinc-500 tracking-widest">Direct Line</span>
+<a class="text-lg font-semibold hover:text-primary" href="tel:+918089658773">+91 80896 58773</a>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7">
+<form class="bg-surface-container p-8 md:p-12 rounded-3xl border border-outline-variant/10 space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-[10px] uppercase font-bold tracking-widest text-zinc-500">Name</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-4 text-zinc-200 placeholder:text-zinc-600 focus:ring-2 focus:ring-primary/40" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase font-bold tracking-widest text-zinc-500">Email</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-4 text-zinc-200 placeholder:text-zinc-600 focus:ring-2 focus:ring-primary/40" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase font-bold tracking-widest text-zinc-500">Subject</label>
+<input class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-4 text-zinc-200 placeholder:text-zinc-600 focus:ring-2 focus:ring-primary/40" placeholder="Project Inquiry" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-[10px] uppercase font-bold tracking-widest text-zinc-500">Message</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-lg px-4 py-4 text-zinc-200 placeholder:text-zinc-600 focus:ring-2 focus:ring-primary/40 resize-none" placeholder="How can I help you?" rows="4"></textarea>
+</div>
+<button class="w-full py-5 bg-primary text-on-primary font-bold uppercase tracking-[0.2em] text-sm rounded-lg hover:translate-y-[-2px] hover:shadow-xl hover:shadow-primary/20 transition-all" type="submit">
+                                Dispatch Message
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-900 w-full py-12">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-screen-2xl mx-auto gap-6">
+<div class="font-manrope font-semibold text-zinc-200 uppercase tracking-tighter">
+                Harikrishnan P
+            </div>
+<div class="flex gap-8">
+<a class="font-inter text-xs text-zinc-500 hover:text-sky-300 transition-colors uppercase tracking-widest" href="#">LinkedIn</a>
+<a class="font-inter text-xs text-zinc-500 hover:text-sky-300 transition-colors uppercase tracking-widest" href="#">GitHub</a>
+<a class="font-inter text-xs text-zinc-500 hover:text-sky-300 transition-colors uppercase tracking-widest" href="#">Twitter</a>
+<a class="font-inter text-xs text-zinc-500 hover:text-sky-300 transition-colors uppercase tracking-widest" href="#">Email</a>
+</div>
+<div class="font-inter text-xs text-zinc-500 opacity-80 uppercase tracking-tight">
+                © 2024 The Engineering Editorial. Built with Architectural Logic.
+            </div>
+</div>
+</footer>
+</body></html>
